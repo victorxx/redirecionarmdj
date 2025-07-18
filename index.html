@@ -1,0 +1,369 @@
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Redirecionando para um destino aleatório. Aguarde um momento...">
+  <title>Redirecionando...</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, blue, white);
+      color: #ffffff;
+      text-align: center;
+      padding-top: 100px;
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2em;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 1.2em;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    #unique-id {
+      margin-top: 40px;
+      font-family: monospace;
+      font-size: 1em;
+      color: #ddd;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .walking-person {
+      margin: 40px auto;
+      width: 80px;
+      height: auto;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Redirecionando...</h1>
+  <!-- Animação de pessoa andando -->
+  <img src="https://i.gifer.com/7VE.gif" alt="Pessoa andando" class="walking-person">
+  
+  <p>Se não for redirecionado automaticamente, <span id="fallback-link">aguarde...</span></p>
+  <div id="unique-id"></div>
+
+  <script>
+    const destinos = [
+
+                    "https://encurta.net/ref/113084217886494396012",
+      
+                    "https://victorxx.github.io/topicogithub01/randomizador.html",
+                   "https://victorxx.github.io/reflexaogithubrandom01/ads.html",
+                   "https://victorxx.github.io/segurogithub01/ads.html",
+                   "https://wa.me/5527999497001?text=ola%20quero%20saber%20sobre%20seguro%20e%20consorcio",
+        "https://victorxx.github.io/encaminhargithub/",
+        "https://victorxx.github.io/reflexaogithubrandom01/ads.html",
+        "https://victorxx.github.io/segurogithub01/ads.html",
+        "https://geocredibnkvitoria.com/",
+        "https://victorxx.github.io/vpsvendagihubrandom01/",
+        "https://victorxx.github.io/GUARAPARIGITHUB01/",
+        "https://victorxx.github.io/erpgithubrnadom01/",
+        "https://victorxx.github.io/airbnbrandom01/",
+        "https://wa.me/5527999860405?text=Olá%2C%20tenho%20interesse%20em%20soluções%20de%20VPS%20e%20ERP.%20Pode%20me%20ajudar%3F",
+        "https://nandomoura01random.vercel.app/",
+        "https://www.facebook.com/capixabadagemaes/",
+        "https://www.youtube.com/@gamenologia/videos",
+        "https://www.larissasaib.com.br/",
+        "https://www.instagram.com/geocredibnkvitoria/",
+        "https://www.youtube.com/watch?v=zjF_yzaEN9I&t=23s",
+        "https://www.youtube.com/watch?v=JbWY7nvpBA0",
+        "https://www.youtube.com/watch?v=qLsURrNcdf8",
+        "https://www.youtube.com/@byclixmidia1008",
+        "https://www.youtube.com/@gamenologia",
+            "https://wa.me/5527999497001?text=ola%20quero%20saber%20sobre%20seguro%20e%20consorcio",
+        "https://victorxx.github.io/encaminhargithub/",
+        "https://victorxx.github.io/reflexaogithubrandom01/ads.html",
+        "https://victorxx.github.io/segurogithub01/ads.html",
+        "https://geocredibnkvitoria.com/",
+        "https://victorxx.github.io/vpsvendagihubrandom01/",
+        "https://victorxx.github.io/GUARAPARIGITHUB01/",
+        "https://victorxx.github.io/erpgithubrnadom01/",
+        "https://victorxx.github.io/airbnbrandom01/",
+        "https://wa.me/5527999860405?text=Olá%2C%20tenho%20interesse%20em%20soluções%20de%20VPS%20e%20ERP.%20Pode%20me%20ajudar%3F",
+        "https://nandomoura01random.vercel.app/",
+        "https://www.facebook.com/capixabadagemaes/",
+        "https://www.youtube.com/@gamenologia/videos",
+        "https://www.larissasaib.com.br/",
+        "https://www.instagram.com/geocredibnkvitoria/",
+        "https://www.youtube.com/watch?v=zjF_yzaEN9I&t=23s",
+        "https://www.youtube.com/watch?v=JbWY7nvpBA0",
+        "https://www.youtube.com/watch?v=qLsURrNcdf8",
+        "https://www.youtube.com/@byclixmidia1008",
+        "https://www.youtube.com/@gamenologia",
+        "https://brasilbrasileiross.blogspot.com/",
+        "https://geocredibnkvitoria.com/",
+        "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+        "https://jogosantigos472302513.wordpress.com/maquinas-vps-temos-todas-as-opcoes-de-maqinas-para-voce/",
+        "https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g",
+        "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+        "https://www.youtube.com/watch?v=3yVwyfsq7ZQ",
+        "https://www.youtube.com/@byclixmidia1008",
+        "https://www.youtube.com/@victorfenix-s9o",
+        "https://recomendadodia23.blogspot.com/",
+        "https://brasilbrasileiross.blogspot.com/",
+        "https://dokehost.blogspot.com/",
+        "https://dai.ly/k72EJDCuNTXzqLDntRs",
+        "https://www.youtube.com/watch?v=zjF_yzaEN9I&t=23s",
+        "https://humorrandompiada02.vercel.app/",
+        "https://randomico02.vercel.app/",
+        "https://randomico02.netlify.app/",
+        "https://carro.wuaze.com/conferir/",
+        "https://arquivos.wuaze.com/conferir/",
+        "https://geocredibnkvitoria.com/",
+        "https://shoppingrandom01.vercel.app/",
+        "https://randomshopping.netlify.app/",
+        "https://vendaschamada.blogspot.com/",
+        "https://wa.me/5527999860405?text=Olá%2C%20tenho%20interesse%20em%20soluções%20de%20VPS%20e%20ERP.%20Pode%20me%20ajudar%3F",
+        "https://wa.me/5527999497001?text=ola%20quero%20saber%20sobre%20seguro%20e%20consorcio",
+        "https://nandomoura01random.vercel.app/",
+        "https://www.facebook.com/capixabadagemaes/",
+        "https://www.youtube.com/@gamenologia/videos",
+        "https://www.larissasaib.com.br/",
+        "https://www.instagram.com/geocredibnkvitoria/",
+        "https://www.youtube.com/watch?v=zjF_yzaEN9I&t=23s",
+        "https://www.youtube.com/watch?v=JbWY7nvpBA0",
+        "https://www.youtube.com/watch?v=qLsURrNcdf8",
+        "https://vendernainternet9.wordpress.com/vps-avancado/",
+        "https://www.youtube.com/@byclixmidia1008",
+        "https://www.youtube.com/@gamenologia",
+        "https://brasilbrasileiross.blogspot.com/",
+        "https://geocredibnkvitoria.com/",
+        "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+        "https://jogosantigos472302513.wordpress.com/maquinas-vps-temos-todas-as-opcoes-de-maqinas-para-voce/",
+        "https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g",
+        "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+        "https://www.youtube.com/watch?v=3yVwyfsq7ZQ",
+        "https://humorrandompiada02.vercel.app/",
+        "https://randomico02.vercel.app/",
+        "https://randomico02.netlify.app/",
+        "https://carro.wuaze.com/conferir/",
+        "https://arquivos.wuaze.com/conferir/",
+        "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+        "https://geocredibnkvitoria.com/",
+        "https://jogosantigos472302513.wordpress.com/",
+        "https://brasilbrasileiross.blogspot.com/",
+        "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+        "https://randomico02.vercel.app/",
+        "https://shoppingrandom01.vercel.app/",
+        "https://randomshopping.netlify.app/",
+        "https://vendaschamada.blogspot.com/",
+        "https://randomico02.netlify.app/",
+        "https://carro.wuaze.com/conferir/",
+        "https://arquivos.wuaze.com/conferir/",
+        "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+                "https://wa.me/5527999497001?text=ola%20quero%20saber%20sobre%20seguro%20e%20consorcio",
+                    "https://victorxx.github.io/encaminhargithub/",
+                    "https://victorxx.github.io/reflexaogithubrandom01/ads.html",
+                   "https://victorxx.github.io/segurogithub01/ads.html",
+                    "https://geocredibnkvitoria.com/",
+                   "https://victorxx.github.io/vpsvendagihubrandom01/",
+                    "https://victorxx.github.io/GUARAPARIGITHUB01/",
+                    "https://victorxx.github.io/erpgithubrnadom01/",
+                    "https://victorxx.github.io/airbnbrandom01/",
+                    "https://wa.me/5527999860405?text=Olá%2C%20tenho%20interesse%20em%20soluções%20de%20VPS%20e%20ERP.%20Pode%20me%20ajudar%3F",
+                    "https://wa.me/5527999497001?text=ola%20quero%20saber%20sobre%20seguro%20e%20consorcio",
+                    "https://nandomoura01random.vercel.app/",
+                    "https://www.facebook.com/capixabadagemaes/",
+                    "https://www.youtube.com/@gamenologia/videos",
+                    "https://www.larissasaib.com.br/",
+                    "https://www.larissasaib.com.br/",
+                    "https://www.instagram.com/geocredibnkvitoria/",
+                    "https://www.youtube.com/watch?v=zjF_yzaEN9I&t=23s",
+                    "https://www.youtube.com/watch?v=JbWY7nvpBA0",
+                    "https://www.youtube.com/watch?v=qLsURrNcdf8",
+                    "https://www.youtube.com/@byclixmidia1008",
+                    "https://www.youtube.com/@gamenologia",
+                    "https://brasilbrasileiross.blogspot.com/",
+                    "https://geocredibnkvitoria.com/",
+                    "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+                    "https://jogosantigos472302513.wordpress.com/maquinas-vps-temos-todas-as-opcoes-de-maqinas-para-voce/",
+                    "https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g",
+                    "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+                    "https://www.youtube.com/watch?v=3yVwyfsq7ZQ",
+                    "https://www.youtube.com/@byclixmidia1008",
+                    "https://www.youtube.com/@victorfenix-s9o",
+                    "https://recomendadodia23.blogspot.com/",
+                    "https://brasilbrasileiross.blogspot.com/",
+                    "https://dokehost.blogspot.com/",
+                "https://dai.ly/k72EJDCuNTXzqLDntRs",
+                "https://www.youtube.com/watch?v=zjF_yzaEN9I&t=23s",
+                "https://www.youtube.com/watch?v=JbWY7nvpBA0",
+                "https://www.youtube.com/watch?v=qLsURrNcdf8",
+                "https://www.youtube.com/@byclixmidia1008",
+                "https://www.youtube.com/@gamenologia",
+                "https://brasilbrasileiross.blogspot.com/",
+                "https://geocredibnkvitoria.com/",
+                "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+                "https://jogosantigos472302513.wordpress.com/maquinas-vps-temos-todas-as-opcoes-de-maqinas-para-voce/",
+                "https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g",
+                "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+                "https://www.youtube.com/watch?v=3yVwyfsq7ZQ",
+                "https://humorrandompiada02.vercel.app/",
+                "https://randomico02.vercel.app/",
+                "https://randomico02.netlify.app/",
+                "https://carro.wuaze.com/conferir/",
+                "https://arquivos.wuaze.com/conferir/",
+                "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+                "https://geocredibnkvitoria.com/",
+                "https://jogosantigos472302513.wordpress.com/",
+                "https://brasilbrasileiross.blogspot.com/",
+                "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+                "https://randomico02.vercel.app/",
+                "https://shoppingrandom01.vercel.app/",
+                "https://randomshopping.netlify.app/",
+                "https://vendaschamada.blogspot.com/",
+                "https://randomico02.netlify.app/",
+                "https://carro.wuaze.com/conferir/",
+                "https://arquivos.wuaze.com/conferir/",
+                "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+                "https://geocredibnkvitoria.com/",
+                "https://jogosantigos472302513.wordpress.com/",
+                "https://brasilbrasileiross.blogspot.com/",
+                "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+                "https://wa.me/5527999860405?text=Olá%2C%20tenho%20interesse%20em%20soluções%20de%20VPS%20e%20ERP.%20Pode%20me%20ajudar%3F",
+                "https://wa.me/5527999497001?text=ola%20quero%20saber%20sobre%20seguro%20e%20consorcio",
+                "https://nandomoura01random.vercel.app/",
+                "https://www.facebook.com/capixabadagemaes/",
+                "https://www.youtube.com/@gamenologia/videos",
+                "https://www.larissasaib.com.br/",
+                "https://www.instagram.com/geocredibnkvitoria/",
+                "https://www.youtube.com/watch?v=zjF_yzaEN9I&t=23s",
+                "https://www.youtube.com/watch?v=JbWY7nvpBA0",
+                "https://www.youtube.com/watch?v=qLsURrNcdf8",
+                "https://www.youtube.com/@byclixmidia1008",
+                "https://www.youtube.com/@gamenologia",
+                "https://jogosantigos472302513.wordpress.com/maquinas-vps-temos-todas-as-opcoes-de-maqinas-para-voce/",
+                "https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g",
+                "https://recomendadodia23.blogspot.com/",
+                "https://dokehost.blogspot.com/",
+                "https://www.dailymotion.com/victorsaib",
+                 "https://vendernainternet9.wordpress.com/vps-avancado/",
+             "https://wa.me/5527999860405?text=Olá%2C%20tenho%20interesse%20em%20soluções%20de%20VPS%20e%20ERP.%20Pode%20me%20ajudar%3F",
+                    "https://wa.me/5527999497001?text=ola%20quero%20saber%20sobre%20seguro%20e%20consorcio",
+                    "https://nandomoura01random.vercel.app/",
+                    "https://www.facebook.com/capixabadagemaes/",
+                    "https://www.youtube.com/@gamenologia/videos",
+                    "https://www.larissasaib.com.br/",
+                    "https://www.larissasaib.com.br/",
+                    "https://www.instagram.com/geocredibnkvitoria/",
+                    "https://www.youtube.com/watch?v=zjF_yzaEN9I&t=23s",
+                    "https://www.youtube.com/watch?v=JbWY7nvpBA0",
+                    "https://www.youtube.com/watch?v=qLsURrNcdf8",
+                    "https://vendernainternet9.wordpress.com/vps-avancado/",
+                    "https://www.youtube.com/@byclixmidia1008",
+                    "https://www.youtube.com/@gamenologia",
+                    "https://brasilbrasileiross.blogspot.com/",
+                    "https://geocredibnkvitoria.com/",
+                    "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+                    "https://jogosantigos472302513.wordpress.com/maquinas-vps-temos-todas-as-opcoes-de-maqinas-para-voce/",
+                    "https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g",
+                    "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+                    "https://www.youtube.com/watch?v=3yVwyfsq7ZQ",
+                    "https://www.youtube.com/@byclixmidia1008",
+                    "https://www.youtube.com/@victorfenix-s9o",
+                    "https://recomendadodia23.blogspot.com/",
+                    "https://brasilbrasileiross.blogspot.com/",
+                    "https://dokehost.blogspot.com/",
+                "https://dai.ly/k72EJDCuNTXzqLDntRs",
+                "https://www.youtube.com/watch?v=zjF_yzaEN9I&t=23s",
+                "https://www.youtube.com/watch?v=JbWY7nvpBA0",
+                "https://www.youtube.com/watch?v=qLsURrNcdf8",
+                "https://www.youtube.com/@byclixmidia1008",
+                "https://www.youtube.com/@gamenologia",
+                "https://brasilbrasileiross.blogspot.com/",
+                "https://geocredibnkvitoria.com/",
+                "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+                "https://jogosantigos472302513.wordpress.com/maquinas-vps-temos-todas-as-opcoes-de-maqinas-para-voce/",
+                "https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g",
+                "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+                "https://www.youtube.com/watch?v=3yVwyfsq7ZQ",
+                "https://humorrandompiada02.vercel.app/",
+                "https://randomico02.vercel.app/",
+                "https://randomico02.netlify.app/",
+                "https://carro.wuaze.com/conferir/",
+                "https://arquivos.wuaze.com/conferir/",
+                "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+                "https://geocredibnkvitoria.com/",
+                "https://jogosantigos472302513.wordpress.com/",
+                "https://brasilbrasileiross.blogspot.com/",
+                "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+                "https://randomico02.vercel.app/",
+                "https://shoppingrandom01.vercel.app/",
+                "https://randomshopping.netlify.app/",
+                "https://vendaschamada.blogspot.com/",
+                "https://randomico02.netlify.app/",
+                "https://carro.wuaze.com/conferir/",
+                "https://arquivos.wuaze.com/conferir/",
+                "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+                "https://geocredibnkvitoria.com/",
+                "https://jogosantigos472302513.wordpress.com/",
+                "https://brasilbrasileiross.blogspot.com/",
+                "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+                "https://wa.me/5527999860405?text=Olá%2C%20tenho%20interesse%20em%20soluções%20de%20VPS%20e%20ERP.%20Pode%20me%20ajudar%3F",
+                "https://wa.me/5527999497001?text=ola%20quero%20saber%20sobre%20seguro%20e%20consorcio",
+                "https://nandomoura01random.vercel.app/",
+                "https://www.facebook.com/capixabadagemaes/",
+                "https://www.youtube.com/@gamenologia/videos",
+                "https://www.larissasaib.com.br/",
+                "https://www.instagram.com/geocredibnkvitoria/",
+                "https://www.youtube.com/watch?v=zjF_yzaEN9I&t=23s",
+                "https://www.youtube.com/watch?v=JbWY7nvpBA0",
+                "https://www.youtube.com/watch?v=qLsURrNcdf8",
+                "https://www.youtube.com/@byclixmidia1008",
+                "https://www.youtube.com/@gamenologia",
+                "https://jogosantigos472302513.wordpress.com/maquinas-vps-temos-todas-as-opcoes-de-maqinas-para-voce/",
+                "https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g",
+                "https://recomendadodia23.blogspot.com/",
+                "https://dokehost.blogspot.com/",
+                "https://www.dailymotion.com/victorsaib",
+                "https://chamada5.wordpress.com/2025/07/08/vps-avancado/",
+                "https://humornainternethumoresad.wordpress.com/vps-avancada/",
+                "https://tudosobretudo4.wordpress.com/vps-avancada/"
+                   
+    ];
+
+    function gerarIdentificador(tamanho = 899) {
+      const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*-_=+";
+      let resultado = "";
+      for (let i = 0; i < tamanho; i++) {
+        resultado += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return resultado;
+    }
+
+    const destinoAleatorio = destinos[Math.floor(Math.random() * destinos.length)];
+    const identificadorUnico = gerarIdentificador();
+
+    document.getElementById("unique-id").innerText = "Identificador único: " + identificadorUnico;
+    document.getElementById("fallback-link").innerHTML = `<a href="${destinoAleatorio}">clique aqui</a>`;
+
+    setTimeout(() => {
+      window.location.href = destinoAleatorio;
+    }, 3000);
+  </script>
+</body>
+</html>
